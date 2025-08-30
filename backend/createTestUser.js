@@ -31,7 +31,7 @@ async function createTestUser() {
                 password: "adarsh123", // This will be hashed
                 gender: "male",
                 profilePic: {
-                    imageUrl: "https://avatar.iran.liara.run/public/boy?username=Adarsh"
+                    imageUrl: "https://ui-avatars.com/api/?name=Adarsh&background=random"
                 },
                 role: "user",
                 fineAmount: 50, // Set fine amount to ₹50

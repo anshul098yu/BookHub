@@ -26,11 +26,11 @@ router.get("/returned-books", isLoggedIn, borrowController.getReturnedBooks);
 // Get borrow history
 router.get("/history", isLoggedIn, borrowController.getBorrowHistory);
 
-// Get request stats (for admin)
-router.get("/request-stats", isLoggedIn, borrowController.getRequestStats);
+// Get request stats (for admin) - Updated to match frontend expectation
+router.get("/requestStats", isLoggedIn, borrowController.getRequestStats);
 
-// Get request data (for admin)
-router.get("/requests", isLoggedIn, borrowController.fetchRequestData);
+// Get request data (for admin) - Updated to match frontend expectation
+router.get("/requestData", isLoggedIn, borrowController.fetchRequestData);
 
 // Export router
 module.exports = router;
