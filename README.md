@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BookHub - Library Management System
 
 BookHub is a full-stack Library Management System designed to streamline book borrowing, user management, and library analytics. Built with the MERN stack, it provides a modern, responsive interface for both library users and administrators.
@@ -54,3 +55,7 @@ npm run dev
 ## License
 
 This project is licensed under the ISC License.
+=======
+# BookHub
+ The main capabilities of BookHub, including user authentication, book discovery, borrowing systems, queue management, profile management, review systems, dashboard analytics, book and user management, notification systems, and more.
+>>>>>>> 0f0f2e09d1eaf56f9344015850268f3c7dbe2ae6
