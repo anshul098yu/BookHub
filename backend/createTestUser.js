@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const User = require("./models/user.model");
+const Admin = require("./models/admin.model");
 
 // Load environment variables
 dotenv.config();
@@ -42,6 +43,29 @@ async function createTestUser() {
 
             await newUser.save();
             console.log("User 'Adarsh' created successfully with fine amount: ₹", newUser.fineAmount);
+        }
+
+        // Create admin user
+        const existingAdmin = await Admin.findOne({ userName: "Aditya" });
+
+        if (existingAdmin) {
+            console.log("Admin 'Aditya' already exists.");
+        } else {
+            // Create new admin
+            const newAdmin = new Admin({
+                userName: "Aditya",
+                password: "Aditya098", // This will be hashed
+                email: "aditya@example.com",
+                fullName: "Aditya Admin",
+                profilePic: {
+                    imageUrl: "https://ui-avatars.com/api/?name=Aditya&background=random"
+                },
+                isVerified: true,
+                role: "admin"
+            });
+
+            await newAdmin.save();
+            console.log("Admin 'Aditya' created successfully");
         }
 
         console.log("Test user setup completed");
