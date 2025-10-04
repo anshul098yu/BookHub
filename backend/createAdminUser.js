@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 const Admin = require("./models/admin.model");
 const { dbConnect } = require("./config/db");
 
-// Admin credentials
+// Admin credentials (using a shorter username to meet the 10-character limit)
 const adminCredentials = {
-    userName: "tushar",
-    password: "tushar098",
+    userName: "anshul098", // Shortened from "anshul098yu" to meet 10-character limit
+    password: "Anshulraj098@",
     role: "admin"
 };
 
